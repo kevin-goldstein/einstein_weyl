@@ -41,6 +41,4 @@ Author metadata is supplied in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
-No license has been selected in this bundle because the choice belongs to the authors.
-Add the chosen license before making the repository public; without a license, ordinary copyright restrictions apply even though the files are visible.
-# einstein_weyl
+MIT
