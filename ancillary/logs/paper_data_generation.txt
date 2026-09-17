@@ -1,0 +1,3 @@
+PASS: generated outward parameter, mass, temperature, literal-action entropy, and matching data.
+Minimum normalized matching margin: 0.5406197702071599
+Generated fragments: /Users/vishnu/Documents/Codex/2026-09-14/ref/work/revision_round2/public_repository_bundle/fragments

@@ -1,0 +1,2 @@
+PASS: 1400 randomized interval pairs; exact rational arithmetic oracle, negative division, aliasing, precision changes, exact midpoint, directed decimal parsing/serialization.
+MPFR 4.2.2, GMP 6.3.0

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this computational certificate, please cite the associated paper and this repository."
+title: "Computational certificate for an Einstein--Weyl black hole"
+type: software
+authors:
+  - family-names: Goldstein
+    given-names: Kevin
+    affiliation: "Mandelstam Institute for Theoretical Physics, School of Physics, University of the Witwatersrand; National Institute for Theoretical and Computational Sciences"
+  - family-names: Jejjala
+    given-names: Vishnu
+    affiliation: "Mandelstam Institute for Theoretical Physics, School of Physics, University of the Witwatersrand; National Institute for Theoretical and Computational Sciences"
+repository-code: "https://github.com/USERNAME/einstein-weyl-black-hole-proof"
+keywords:
+  - Einstein--Weyl gravity
+  - black holes
+  - computer assisted proof
+  - interval arithmetic
+  - Poincare--Miranda theorem

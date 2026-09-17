@@ -1,0 +1,1 @@
+PASS: exact initializer parsing across C++ line wrapping; missing and ambiguous inputs rejected

@@ -1,0 +1,6 @@
+PASS: N derivative equals 4 p N / A (exact residual 0)
+PASS: E2 is constant along the six-state equations (exact residual 0)
+PASS: fixed-v derivative used by the scalar matching certificate (exact residual 0)
+PASS: remaining Kundt equation in t coordinates equals -N/(6 A^4) (exact residual 0)
+PASS: general-radius horizon data satisfy the remaining Kundt equation (exact residual 0)
+All symbolic identities verified with SymPy 1.14.0

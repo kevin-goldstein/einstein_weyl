@@ -1,0 +1,26 @@
+mkdir -p build
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off tests/test_mpfr_interval.cpp -L/opt/local/lib -lmpfr -lgmp -o build/test_mpfr_interval
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off src/test_float128_compat.cpp src/mpfr_float128_compat.cpp -L/opt/local/lib -lmpfr -lgmp -lquadmath -o build/test_float128_compat
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+python3 patches/patch_core_validation.py --check-output src/verified_core_taylor_model.repaired.cpp
+PASS: production core tokens match the repaired reference and named readability transformations
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off patches/check_core_repairs.cpp src/mpfr_float128_compat.cpp -L/opt/local/lib -lmpfr -lgmp -lquadmath -o build/check_core_repairs
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+build/test_mpfr_interval > logs/test_mpfr_interval.txt
+build/test_float128_compat > logs/test_float128_compat.txt
+build/check_core_repairs > logs/check_core_repairs.txt
+python3 tests/test_paper_data_parser.py > logs/test_paper_data_parser.txt
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off src/verified_core_taylor_model.repaired.cpp src/mpfr_float128_compat.cpp -L/opt/local/lib -lmpfr -lgmp -lquadmath -o build/core_reconstructed
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off src/horizon_positivity.cpp -L/opt/local/lib -lmpfr -lgmp -o build/horizon_positivity
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+/opt/local/bin/g++-mp-15 -Iinclude -I/opt/local/include -std=gnu++17 -O2 -fno-fast-math -ffp-contract=off src/horizon_second_derivative.cpp -L/opt/local/lib -lmpfr -lgmp -o build/horizon_second_derivative
+ld: warning: -ld_classic is deprecated and will be removed in a future release
+build/horizon_positivity > logs/horizon_positivity.txt
+build/horizon_second_derivative > logs/horizon_second_derivative.txt
+build/core_reconstructed 40 > logs/core_reconstructed.txt 2> logs/core_reconstructed.log
+python3 python/check_reconstruction.py > logs/verification.txt
+python3 python/symbolic/verify_constraints.py > logs/symbolic_constraints.txt
+python3 python/matching/generate_paper_data.py > logs/paper_data_generation.txt
+PASS: arithmetic, rebuilt horizon/core, horizon derivations and initialization, tail, exact matching, symbolic identities and outward paper data. See logs/.

@@ -1,0 +1,1 @@
+PASS binary128 bridge: 10000 exact round trips; 3000 signed directed cases; boundary/tie checks
