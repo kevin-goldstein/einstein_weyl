@@ -38,7 +38,6 @@ The complete verification passes with 485 coarse steps and 1,590 sensitivity sub
 ## Citation and public URL
 
 Author metadata is supplied in [`CITATION.cff`](CITATION.cff).
-Before publication, replace `https://github.com/USERNAME/einstein-weyl-black-hole-proof` in that file and in the manuscript's `\PublicRepositoryURL` definition with the actual public repository or Zenodo record URL.
 
 See [`UPLOAD_INSTRUCTIONS.md`](UPLOAD_INSTRUCTIONS.md) for GitHub and Zenodo publication routes.
 
