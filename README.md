@@ -39,8 +39,6 @@ The complete verification passes with 485 coarse steps and 1,590 sensitivity sub
 
 Author metadata is supplied in [`CITATION.cff`](CITATION.cff).
 
-See [`UPLOAD_INSTRUCTIONS.md`](UPLOAD_INSTRUCTIONS.md) for GitHub and Zenodo publication routes.
-
 ## License
 
 No license has been selected in this bundle because the choice belongs to the authors.
